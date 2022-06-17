@@ -26,4 +26,12 @@ class CategoryTest {
     assertThat(actual).isEqualTo(Category._92);
     assertThat(actual.toString()).isEqualTo("text too short or garbled");
   }
+
+
+  @Test
+  void valueOf() {
+    assertThatIllegalArgumentException()
+        .isThrownBy(() -> Category.valueOf("XXXX"))
+        .withMessage("No enum constant com.soebes.kata.enums.Category.XXXX");
+  }
 }
