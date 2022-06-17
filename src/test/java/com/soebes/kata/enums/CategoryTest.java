@@ -22,9 +22,7 @@ class CategoryTest {
   @Test
   void fromName() {
     var actual = Category.valueOf("_92");
-
-    assertThat(actual).isEqualTo(Category._92);
-    assertThat(actual.toString()).isEqualTo("text too short or garbled");
+    assertThat(actual).hasToString("text too short or garbled").isEqualTo(Category._92);;
   }
 
 
